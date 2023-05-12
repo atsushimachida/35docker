@@ -6,6 +6,8 @@ FROM ubuntu:22.04
 RUN mkdir /dailyreportsystem
 RUN touch /dailyreportsystem/firstvi.txt
 
+
+
 # 2. viのインストール
 RUN apt update
 RUN apt -y install vim
