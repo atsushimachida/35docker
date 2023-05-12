@@ -3,8 +3,8 @@ FROM ubuntu:22.04
 
 # 1. dailyreportsystemディレクトリをルートディレクトリに作成して
 #    そのなかにfirstvi.txtを作成
-RUN mkdir /dailyreportsystem
-RUN touch /dailyreportsystem/firstvi.txt
+RUN mkdir /dailyreportcontainer
+RUN touch /dailyreportcontainer/firstvi.txt
 
 # 2. viのインストール
 RUN apt update
