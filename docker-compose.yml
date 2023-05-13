@@ -10,7 +10,7 @@ services:
       - 80:80
       - 443:443
     links:                # このコンテナが依存するコンテナとそのコンテナ名の指定
-      - "db:dailyreportcontainer-db-1"
+      - "db:db_container"
     container_name: "rep_container" # このコンテナの名前の指定
   # MySQL用のコンテナ（dbという名前は任意で設定したもの）
   db:
@@ -20,7 +20,7 @@ services:
       - 4306:3306
     expose:               # 他のコンテナと通信できるポート番号の指定
       - 3306
-    container_name: "dailyreportcontainer-db-1"
+    container_name: "db_container"
     volumes:              # データの永続化の設定
       - db_data:/var/lib/mysql       # ボリューム名:コンテナのディレクトリ
 
